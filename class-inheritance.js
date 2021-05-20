@@ -1,12 +1,12 @@
 class Publication {
 
+    static numberOfPublications = 0;
+
     id = null;
     authors = null;
     name = null;
     content = null;
     created = null;
-
-    static numberOfPublications = 0;
 
     constructor(authors, name, content) {
         this.id = Publication.numberOfPublications++;
@@ -54,7 +54,6 @@ class Book extends Publication {
 
     constructor(authors, name, content, isbn) {
         super(authors, name, content);
-
         this.isbn = isbn;
     }
 
@@ -70,7 +69,8 @@ class Book extends Publication {
 
 }
 
-class Score extends Publication{
+class Score extends Publication {
+
     type = '';
 
     constructor(authors, name, content, type) {
